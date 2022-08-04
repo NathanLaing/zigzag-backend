@@ -6,12 +6,12 @@ import { Dog } from './dog.entity';
 export class DogController {
   constructor(private readonly dogService: DogService) {}
 
-  @Get(':id')
+  @Get('/dog/:id')
   getDog(@Param() params): Dog {
     return this.dogService.getDog(params.id);
   }
 
-  @Get()
+  @Get('/dogs')
   getAllDogs(): Dog[] {
     return this.dogService.getAllDogs();
   }
