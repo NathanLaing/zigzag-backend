@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { DogService } from './dog.service';
-import { Dog } from './dog.entity';
+import { DogService } from '../../services/dog.service';
+import { Dog } from '../../shared/dog.interface';
 
 @Controller()
 export class DogController {
